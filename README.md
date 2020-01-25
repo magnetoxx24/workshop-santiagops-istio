@@ -35,6 +35,7 @@ Infraestructura requerida para implementar la Malla de Servicio para el Desplieg
 - Nginx
 
 Diagrama Infraestructura
+![Diagrama de la Infraestructura Cluster Kubernetes con Malla de Servicio Istio](https://github.com/magnetoxx24/workshop-santiagops-istio/blob/master/imagenes/Diagrama.png)
 
 Presentación de Gestión y Despliegue Microservicios Usando la Malla de Servicio Istio.
 
