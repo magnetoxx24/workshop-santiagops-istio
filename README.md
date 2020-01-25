@@ -1,3 +1,5 @@
+WorkShop Managing Microservices With Istio Service Mesh
+
 Istio es una plataforma abierta para conectar, asegurar, controlar y observar microservicios, también conocido como malla de servicio, en plataformas en la nube como Kubernetes.
 
 Con Istio, puede administrar el tráfico de red, equilibrar la carga entre microservicios, aplicar políticas de acceso,verificar la identidad del servicio, asegurar la comunicación del servicio y observar exactamente qué sucede con sus servicios.
@@ -43,25 +45,25 @@ https://github.com/magnetoxx24/workshop-santiagops-istio.git
 
 Comandos para Desplegar y Gestionar Istio.
 
-```$ cd santiagops/istio-1.4.3/install/kubernetes
+```$ cd santiagops/istio-1.4.3/install/kubernetes```
 
-$ kubectl apply -f istio-demo.yaml
+```$ kubectl apply -f istio-demo.yaml```
 
-$ kubectl get pods -n istio-system
+```$ kubectl get pods -n istio-system```
 
-$ kubectl get po,svc -n istio-system
+```$ kubectl get po,svc -n istio-system```
 
-$ kubectl get namespace -L istio-injection
+```$ kubectl get namespace -L istio-injection```
 
-$ kubectl label namespace santiagops istio-injection=enabled
+```$ kubectl label namespace santiagops istio-injection=enabled```
 
 Despliegue de Microservicio BookInfo
 
-$ kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+```$ kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml```
 
-$ kubectl get services
+```$ kubectl get services```
 
-$ kubectl get pods```
+```$ kubectl get pods```
 
 ```$ kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>.\*</title>"```
 
