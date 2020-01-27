@@ -69,7 +69,7 @@ spec:
         app: details
         version: v1
       annotations:
-        sidecar.istio.io/inject: "true"
+        sidecar.istio.io/inject: "false"
     spec:
       serviceAccountName: bookinfo-details
       containers:
@@ -78,10 +78,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
-        # resources:
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "200m"
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"
 ---
 ##################################################################################################
 # Ratings service
@@ -135,10 +135,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
-        # resources:
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "200m"
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"
 ---
 ##################################################################################################
 # Reviews service
@@ -192,10 +192,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
-        # resources:
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "200m"
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -225,10 +225,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
-        # resources:
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "200m"
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -258,10 +258,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
-        # resources:
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "200m"
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"
 ---
 ##################################################################################################
 # Productpage services
@@ -315,8 +315,8 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
-        # resources:
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "200m"
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"
 ---
