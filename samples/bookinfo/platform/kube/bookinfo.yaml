@@ -70,6 +70,8 @@ spec:
         version: v1
       annotations:
         sidecar.istio.io/inject: "false"
+        sidecar.istio.io/proxyCPU: "200m"
+        sidecar.istio.io/proxyMemory: "1Gi"
     spec:
       serviceAccountName: bookinfo-details
       containers:
@@ -127,6 +129,8 @@ spec:
         version: v1
       annotations:
         sidecar.istio.io/inject: "true"
+        sidecar.istio.io/proxyCPU: "200m"
+        sidecar.istio.io/proxyMemory: "1Gi"
     spec:
       serviceAccountName: bookinfo-ratings
       containers:
@@ -184,6 +188,8 @@ spec:
         version: v1
       annotations:
         sidecar.istio.io/inject: "true"
+        sidecar.istio.io/proxyCPU: "200m"
+        sidecar.istio.io/proxyMemory: "1Gi"
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -217,6 +223,8 @@ spec:
         version: v2
       annotations:
         sidecar.istio.io/inject: "true"
+        sidecar.istio.io/proxyCPU: "200m"
+        sidecar.istio.io/proxyMemory: "1Gi"
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -250,6 +258,8 @@ spec:
         version: v3
       annotations:
         sidecar.istio.io/inject: "true"
+        sidecar.istio.io/proxyCPU: "200m"
+        sidecar.istio.io/proxyMemory: "1Gi"
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -307,6 +317,8 @@ spec:
         version: v1
       annotations:
         sidecar.istio.io/inject: "true"
+        sidecar.istio.io/proxyCPU: "200m"
+        sidecar.istio.io/proxyMemory: "1Gi"
     spec:
       serviceAccountName: bookinfo-productpage
       containers:
