@@ -46,7 +46,7 @@ https://github.com/magnetoxx24/workshop-santiagops-istio.git
 
 Comandos para Desplegar y Gestionar Istio.
 
-```$ cd santiagops/istio-1.4.3/install/kubernetes```
+```$ cd workshop-santiagops-istio/install/kubernetes```
 
 ```$ kubectl apply -f istio-demo.yaml```
 
