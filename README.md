@@ -95,6 +95,7 @@ Comando para visualizar las métricas de los nodos y los pods que están en ejec
 ```$ kubectl describe nodes -o wide```
 
 Comando para visualizar todos los pods de mayor consumo de recursos del cluster de Kubernetes
+
 ```$ kubectl top pods --all-namespaces```
 
 Comando para visualizar el total de recursos por nodos que esta consumiendo los recursos activos
@@ -106,19 +107,23 @@ Comando para ver los nodos por role definidos dentro del cluster
 ```$ kubectl get node --selector='!node-role.kubernetes.io/node' -o wide```
 
 Comando para visualizar los Namespaces creado dentro del cluster
+
 ```$ kubectl get namespaces```
 
 Comandos para crear un nuevo Namespaces
+
 ```$ kubectl create ns santiagops```
 
 Comando para visualizar los Namespaces y estatus de Injection Automatica de Istio
+
 ```$ kubectl get namespace -L istio-injection```
 
 Comando para habilitar la Injection Manual del Sidecard de Istio
 ```$ kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)```
 
 Comando para activar la injection automatica de Istio a un Namespaces especificado
-\$ kubectl label namespace santiagops istio-injection=enabled
+
+```$ kubectl label namespace santiagops istio-injection=enabled```
 
 Cambiar el namespaces por default
 
@@ -129,4 +134,3 @@ Guarde permanentemente el espacio de nombres para todos los comandos kubectl pos
 ```$ kubectl config set-context --current —namespace=santiagops```
 
 ```$ kubectl config view | grep namespace```
-

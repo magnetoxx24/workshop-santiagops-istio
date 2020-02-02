@@ -68,6 +68,8 @@ spec:
       labels:
         app: details
         version: v1
+        # Parametros para activar la injections del sidecar dentro del pod, 
+        # limitación de los recursos de cpu y memoria al container del proxy envoy.
       annotations:
         sidecar.istio.io/inject: "false"
         sidecar.istio.io/proxyCPU: "200m"
@@ -80,6 +82,7 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
+        # Limitación de los Recursos del Container del Microservicio 
         resources:
           limits:
             memory: "1024Mi"
@@ -128,7 +131,7 @@ spec:
         app: ratings
         version: v1
       annotations:
-        sidecar.istio.io/inject: "true"
+        sidecar.istio.io/inject: "true" 
         sidecar.istio.io/proxyCPU: "200m"
         sidecar.istio.io/proxyMemory: "1Gi"
     spec:
