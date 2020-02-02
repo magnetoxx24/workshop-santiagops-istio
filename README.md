@@ -119,6 +119,7 @@ Comando para visualizar los Namespaces y estatus de Injection Automatica de Isti
 ```$ kubectl get namespace -L istio-injection```
 
 Comando para habilitar la Injection Manual del Sidecard de Istio
+
 ```$ kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)```
 
 Comando para activar la injection automatica de Istio a un Namespaces especificado
